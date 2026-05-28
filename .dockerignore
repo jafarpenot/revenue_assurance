@@ -18,8 +18,7 @@ __pycache__/
 *.pyc
 *.pyo
 
-# Generated data — regenerated inside the image via `RUN python generate_data.py`
-data/
+# data/ is intentionally NOT ignored — the Dockerfile COPYs it into the image.
 
 # Logs (regenerated at runtime)
 agent_trace.log

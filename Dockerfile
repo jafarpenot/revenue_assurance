@@ -6,12 +6,10 @@ WORKDIR /app
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Application code + branding assets.
+# Application code, branding assets, and pre-generated synthetic data.
 COPY generate_data.py tools.py agents.py app.py run_demo.py ./
 COPY assets/ ./assets/
-
-# Generate the synthetic data inside the image (seed=42, so reproducible).
-RUN python generate_data.py
+COPY data/ ./data/
 
 # Gradio needs to listen on all interfaces inside the container.
 ENV GRADIO_SERVER_NAME=0.0.0.0 \

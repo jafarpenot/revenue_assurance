@@ -26,8 +26,8 @@ ENV/
 *.swp
 .DS_Store
 
-# Project-generated data — reproducible via `python generate_data.py` (seed=42)
-data/
+# Synthetic data is committed to the repo so the demo works on a fresh clone.
+# Re-generate it with `python generate_data.py` (seed=42 → reproducible).
 
 # Project-generated logs
 agent_trace.log
