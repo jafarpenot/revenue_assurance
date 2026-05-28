@@ -1,0 +1,29 @@
+# Secrets and local state — passed at run-time via --env-file instead.
+.env
+.env.local
+
+# VCS, IDE, OS noise
+.git/
+.gitignore
+.vscode/
+.idea/
+.claude/
+.DS_Store
+
+# Python virtualenvs and caches
+.venv/
+venv/
+env/
+__pycache__/
+*.pyc
+*.pyo
+
+# Generated data — regenerated inside the image via `RUN python generate_data.py`
+data/
+
+# Logs (regenerated at runtime)
+agent_trace.log
+*.log
+
+# Docs / brief — not needed in the image
+*.md
